@@ -7,11 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22465A222193F8A5005F4CC4 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22465A212193F8A5005F4CC4 /* UIFont.swift */; };
+		22465A242193F975005F4CC4 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22465A232193F975005F4CC4 /* UIColor.swift */; };
+		22465A262193F9C4005F4CC4 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22465A252193F9C4005F4CC4 /* Colors.swift */; };
+		2253F83921940039004EA77A /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2253F83821940039004EA77A /* UIView.swift */; };
+		2253F83D219400FE004EA77A /* CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2253F83C219400FE004EA77A /* CALayer.swift */; };
 		2292E58F2193EBEE00216A6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2292E58E2193EBEE00216A6B /* AppDelegate.swift */; };
 		2292E5912193EBEE00216A6B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2292E5902193EBEE00216A6B /* ViewController.swift */; };
 		2292E5962193EBF300216A6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2292E5952193EBF300216A6B /* Assets.xcassets */; };
 		2292E5992193EBF300216A6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2292E5972193EBF300216A6B /* LaunchScreen.storyboard */; };
 		2292E5A42193EBF300216A6B /* Shudder_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2292E5A32193EBF300216A6B /* Shudder_DemoTests.swift */; };
+		2292E5AF2193EF4A00216A6B /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2292E5AE2193EF4A00216A6B /* NavigationController.swift */; };
+		2292E5B12193F1F000216A6B /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2292E5B02193F1F000216A6B /* View.swift */; };
+		2292E5B32193F20B00216A6B /* HeroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2292E5B22193F20B00216A6B /* HeroView.swift */; };
+		2292E5B52193F26500216A6B /* SmallCoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2292E5B42193F26400216A6B /* SmallCoverView.swift */; };
+		2292E5B72193F28C00216A6B /* CarouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2292E5B62193F28C00216A6B /* CarouselViewController.swift */; };
+		2292E5B92193F2A100216A6B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2292E5B82193F2A100216A6B /* MainViewController.swift */; };
+		2292E5C02193F38500216A6B /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2292E5BF2193F38500216A6B /* Label.swift */; };
+		2292E5C42193F85000216A6B /* RobotoCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2292E5C32193F85000216A6B /* RobotoCondensed-Bold.ttf */; };
 		52A5C5238813F811CD3CCF3F /* Pods_Shudder_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D96DF196AD015A1897187C2 /* Pods_Shudder_Demo.framework */; };
 		E0388557EED1FB39D57E3ADF /* Pods_Shudder_DemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D882F5A428A642C11716F7EA /* Pods_Shudder_DemoTests.framework */; };
 /* End PBXBuildFile section */
@@ -30,6 +43,11 @@
 		09522FF9A0A3419CA95FC2A3 /* Pods-Shudder DemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shudder DemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Shudder DemoTests/Pods-Shudder DemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		159B3880FA5E17B6E2100366 /* Pods-Shudder Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shudder Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Shudder Demo/Pods-Shudder Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		1652AB9294F19F7DD19AF0E8 /* Pods-Shudder DemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shudder DemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shudder DemoTests/Pods-Shudder DemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		22465A212193F8A5005F4CC4 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		22465A232193F975005F4CC4 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		22465A252193F9C4005F4CC4 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		2253F83821940039004EA77A /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		2253F83C219400FE004EA77A /* CALayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayer.swift; sourceTree = "<group>"; };
 		2292E58B2193EBEE00216A6B /* Shudder Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Shudder Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2292E58E2193EBEE00216A6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2292E5902193EBEE00216A6B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -39,6 +57,14 @@
 		2292E59F2193EBF300216A6B /* Shudder DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Shudder DemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2292E5A32193EBF300216A6B /* Shudder_DemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shudder_DemoTests.swift; sourceTree = "<group>"; };
 		2292E5A52193EBF300216A6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2292E5AE2193EF4A00216A6B /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		2292E5B02193F1F000216A6B /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		2292E5B22193F20B00216A6B /* HeroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroView.swift; sourceTree = "<group>"; };
+		2292E5B42193F26400216A6B /* SmallCoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallCoverView.swift; sourceTree = "<group>"; };
+		2292E5B62193F28C00216A6B /* CarouselViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewController.swift; sourceTree = "<group>"; };
+		2292E5B82193F2A100216A6B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		2292E5BF2193F38500216A6B /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
+		2292E5C32193F85000216A6B /* RobotoCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Bold.ttf"; sourceTree = "<group>"; };
 		9D96DF196AD015A1897187C2 /* Pods_Shudder_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shudder_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D882F5A428A642C11716F7EA /* Pods_Shudder_DemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shudder_DemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5721835182D39D5D9113A61 /* Pods-Shudder Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shudder Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shudder Demo/Pods-Shudder Demo.release.xcconfig"; sourceTree = "<group>"; };
@@ -64,6 +90,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22465A202193F893005F4CC4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				22465A212193F8A5005F4CC4 /* UIFont.swift */,
+				22465A232193F975005F4CC4 /* UIColor.swift */,
+				2253F83C219400FE004EA77A /* CALayer.swift */,
+				2253F83821940039004EA77A /* UIView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		2292E5822193EBEE00216A6B = {
 			isa = PBXGroup;
 			children = (
@@ -88,10 +125,14 @@
 			isa = PBXGroup;
 			children = (
 				2292E58E2193EBEE00216A6B /* AppDelegate.swift */,
-				2292E5902193EBEE00216A6B /* ViewController.swift */,
+				2292E5BE2193F31900216A6B /* Utilities */,
+				2292E5BA2193F2DC00216A6B /* Controllers */,
+				2292E5BD2193F31800216A6B /* Models */,
+				2292E5BC2193F30000216A6B /* Views */,
 				2292E5952193EBF300216A6B /* Assets.xcassets */,
 				2292E5972193EBF300216A6B /* LaunchScreen.storyboard */,
 				2292E59A2193EBF300216A6B /* Info.plist */,
+				2292E5C32193F85000216A6B /* RobotoCondensed-Bold.ttf */,
 			);
 			path = "Shudder Demo";
 			sourceTree = "<group>";
@@ -103,6 +144,68 @@
 				2292E5A52193EBF300216A6B /* Info.plist */,
 			);
 			path = "Shudder DemoTests";
+			sourceTree = "<group>";
+		};
+		2292E5BA2193F2DC00216A6B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2292E5BB2193F2F200216A6B /* Base */,
+				2292E5B82193F2A100216A6B /* MainViewController.swift */,
+				2292E5B62193F28C00216A6B /* CarouselViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2292E5BB2193F2F200216A6B /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				2292E5AE2193EF4A00216A6B /* NavigationController.swift */,
+				2292E5902193EBEE00216A6B /* ViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		2292E5BC2193F30000216A6B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2292E5C12193F39400216A6B /* Base */,
+				2292E5B22193F20B00216A6B /* HeroView.swift */,
+				2292E5B42193F26400216A6B /* SmallCoverView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2292E5BD2193F31800216A6B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2292E5C22193F39F00216A6B /* Base */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2292E5BE2193F31900216A6B /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				22465A202193F893005F4CC4 /* Extensions */,
+				22465A252193F9C4005F4CC4 /* Colors.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		2292E5C12193F39400216A6B /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				2292E5B02193F1F000216A6B /* View.swift */,
+				2292E5BF2193F38500216A6B /* Label.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		2292E5C22193F39F00216A6B /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		A9111D95D32E8100A387FAE2 /* Pods */ = {
@@ -209,6 +312,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2292E5C42193F85000216A6B /* RobotoCondensed-Bold.ttf in Resources */,
 				2292E5992193EBF300216A6B /* LaunchScreen.storyboard in Resources */,
 				2292E5962193EBF300216A6B /* Assets.xcassets in Resources */,
 			);
@@ -234,6 +338,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/DeviceKit/DeviceKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Dwifft/Dwifft.framework",
+				"${BUILT_PRODUCTS_DIR}/FLEX/FLEX.framework",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SteviaLayout/Stevia.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
@@ -243,6 +348,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DeviceKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Dwifft.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLEX.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stevia.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
@@ -295,8 +401,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2253F83921940039004EA77A /* UIView.swift in Sources */,
+				2292E5B12193F1F000216A6B /* View.swift in Sources */,
+				22465A262193F9C4005F4CC4 /* Colors.swift in Sources */,
+				22465A242193F975005F4CC4 /* UIColor.swift in Sources */,
+				2292E5B72193F28C00216A6B /* CarouselViewController.swift in Sources */,
 				2292E5912193EBEE00216A6B /* ViewController.swift in Sources */,
+				2292E5B52193F26500216A6B /* SmallCoverView.swift in Sources */,
+				2292E5AF2193EF4A00216A6B /* NavigationController.swift in Sources */,
+				2292E5C02193F38500216A6B /* Label.swift in Sources */,
 				2292E58F2193EBEE00216A6B /* AppDelegate.swift in Sources */,
+				2292E5B32193F20B00216A6B /* HeroView.swift in Sources */,
+				2253F83D219400FE004EA77A /* CALayer.swift in Sources */,
+				22465A222193F8A5005F4CC4 /* UIFont.swift in Sources */,
+				2292E5B92193F2A100216A6B /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,6 +570,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2GK5GPF253;
 				INFOPLIST_FILE = "Shudder Demo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "AMC.Shudder-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -468,6 +587,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2GK5GPF253;
 				INFOPLIST_FILE = "Shudder Demo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "AMC.Shudder-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";

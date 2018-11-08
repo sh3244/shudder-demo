@@ -2,32 +2,34 @@
 # platform :ios, '9.0'
 
 target 'Shudder Demo' do
-  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
-  use_frameworks!
+    # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+    use_frameworks!
 
-  # Pods for Shudder Demo
+    # Pods for Shudder Demo
 
-  # Promises
-  pod 'PromiseKit', '4.5.2'
+    # Promises
+    pod 'PromiseKit', '4.5.2'
 
-  # Device detection
-  pod 'DeviceKit', '1.4.0'
+    # Device detection
+    pod 'DeviceKit', '1.4.0'
 
-  # JSON parser
-  pod 'SwiftyJSON', '4.0.0'
+    # JSON parser
+    pod 'SwiftyJSON', '4.0.0'
 
-  # Networking
-  pod 'Alamofire', '4.7.1'
+    pod 'Alamofire', '4.7.1'
 
-  # LCS diff calculator
-  pod 'Dwifft', '0.8'
+    # LCS diff calculator
+    pod 'Dwifft', '0.8'
 
-  # Layout
-  pod 'SteviaLayout', '4.3.0'
+    # Layout
+    pod 'SteviaLayout', '4.3.0'
 
-  target 'Shudder DemoTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
+    # View Debugger
+    pod 'FLEX', '2.0', :configurations => ['Debug']
+
+    target 'Shudder DemoTests' do
+        inherit! :search_paths
+        # Pods for testing
+    end
 
 end
