@@ -6,4 +6,4 @@ Demonstrates the development of a featured content page.
 
 Notes:
 - Missing centered hero
-- Missing Flickr API integration (substituted with a non-auth endpoint for images, for security reasons)
+- Missing Flickr API integration (substituted with a non-auth endpoint for images, for I do not have a Flickr.)
