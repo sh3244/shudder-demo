@@ -23,9 +23,4 @@ class DownloadManager {
             }
         }
     }
-
-    // Use Flickr
-
-    static let apiKey = "a1716a3b84f9b47a1e076191ce3d2bea"
-    static let secret = "53e6fc3897a916f0"
 }

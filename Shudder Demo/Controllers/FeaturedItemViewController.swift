@@ -14,8 +14,8 @@ class FeaturedItemViewController: ViewController {
 
     let fakeInfinity: Int = 10000
 
-    lazy var titleLabel: UILabel = {
-        let label = UILabel()
+    lazy var titleLabel: Label = {
+        let label = Label()
         label.textColor = Colors.featuredTextGray
         label.font = UIFont.appFont(size: 16)
         label.textAlignment = .left

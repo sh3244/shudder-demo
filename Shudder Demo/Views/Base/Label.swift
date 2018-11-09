@@ -13,10 +13,9 @@ class Label: UILabel {
     override init(frame: CGRect) {
         super.init(frame: frame)
 
-        textAlignment = .center
         textColor = Colors.featuredTextGray
 
-        font = UIFont.appFont(size: 14)
+        font = UIFont.appFont(size: 16)
     }
 
     required init?(coder aDecoder: NSCoder) {
