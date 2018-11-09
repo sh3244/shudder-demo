@@ -7,19 +7,25 @@
 //
 
 import UIKit
+import FLEX
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var navigationController = NavigationController(rootViewController: MainViewController())
+    var navigationController = NavigationController(rootViewController: FeaturedViewController())
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+
+        // View Debugger
+        FLEXManager.shared().showExplorer()
 
         window = UIWindow()
         window?.rootViewController = navigationController
         window?.backgroundColor = .white
         window?.makeKeyAndVisible()
+
+        setupAppearance()
 
         return true
     }

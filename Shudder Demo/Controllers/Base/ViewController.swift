@@ -13,16 +13,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        on("INJECTION BUNDLE NOTIFICATION") {
-            self.layout()
-        }
-        self.layout()
-    }
-
-    func layout() {
-        view.backgroundColor = .black
-
-
     }
 
 }

@@ -10,12 +10,6 @@ target 'Shudder Demo' do
     # Promises
     pod 'PromiseKit', '4.5.2'
 
-    # Device detection
-    pod 'DeviceKit', '1.4.0'
-
-    # JSON parser
-    pod 'SwiftyJSON', '4.0.0'
-
     pod 'Alamofire', '4.7.1'
 
     # LCS diff calculator
