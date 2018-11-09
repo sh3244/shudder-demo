@@ -10,6 +10,8 @@ import UIKit
 
 struct Colors {
 
-    static let featuredTextGray = UIColor(hex: "#FFFFFF")
+    static let featuredTextGray = UIColor(hex: "#86969D")
+
+    static let featuredBackgroundGray = UIColor(hex: "#191E22")
 
 }

@@ -9,87 +9,51 @@
 import Stevia
 import Dwifft
 
-class FeaturedCategoryCell: UITableViewCell, Reusable {
-    var featuredCategoryVC: FeaturedCategoryViewController?
-    weak var parentVC: ViewController?
-
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        backgroundColor = .white
-    }
-
-//    func setup(parentVC: ViewController?, entry: DiscoverEntry, indexPath: IndexPath) {
-//        if self.parentVC == nil {
-//            self.parentVC = parentVC
-//            self.feedItemVC = DiscoverFeedItemViewController()
-//
-//            guard let feedItemVC = self.feedItemVC else { return }
-//            feedItemVC.parentVC = parentVC
-//
-//            parentVC?.addChildViewController(feedItemVC)
-//            sv(feedItemVC.view)
-//            feedItemVC.view.fillContainer()
-//            // NOTE: Settings width == width is required to fix some weird autolayout behavior where the cell would not take up
-//            // the entire width of the table view
-//            feedItemVC.view.Width == Width
-//
-//            feedItemVC.entry = entry
-//            feedItemVC.beginAppearanceTransition(true, animated: false)
-//            feedItemVC.endAppearanceTransition()
-//        } else {
-//            guard let feedItemVC = self.feedItemVC else { return }
-//            feedItemVC.entry = entry
-//            feedItemVC.beginAppearanceTransition(true, animated: false)
-//            feedItemVC.endAppearanceTransition()
-//        }
-//    }
-
-    override func prepareForReuse() {
-        super.prepareForReuse()
-//        feedItemVC?.clear()
-//        feedItemVC?.beginAppearanceTransition(false, animated: false)
-//        feedItemVC?.endAppearanceTransition()
-    }
-
-    override func layoutSubviews() {
-        super.layoutSubviews()
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-
-    deinit {
-        contentView.removeSubviews()
-//        feedItemVC?.clear()
-//        feedItemVC?.beginAppearanceTransition(false, animated: false)
-//        feedItemVC?.endAppearanceTransition()
-//        feedItemVC?.removeFromParentViewController()
-//        feedItemVC = nil
-    }
+@objc enum FeaturedType: Int {
+    case hero, category
 }
 
-class FeaturedCategory: Equatable {
+class FeaturedItem: Equatable {
     var name: String = ""
+    var type: FeaturedType = .category
 
-    init(name: String) {
+    init(name: String, type: FeaturedType = .category) {
         self.name = name
+        self.type = type
     }
 
-    static func == (lhs: FeaturedCategory, rhs: FeaturedCategory) -> Bool {
-        return lhs.name == rhs.name
+    static func == (lhs: FeaturedItem, rhs: FeaturedItem) -> Bool {
+        return lhs.name == rhs.name && lhs.type == rhs.type
     }
 }
 
 class FeaturedViewController: ViewController {
 
-    var diffCalculator: TableViewDiffCalculator<String, FeaturedCategory>?
+    var diffCalculator: TableViewDiffCalculator<String, FeaturedItem>?
+
+    let sampleFeaturedItems: [FeaturedItem] = [
+        FeaturedItem(name: "Hero", type: .hero),
+        FeaturedItem(name: "Newly Added"),
+        FeaturedItem(name: "Curator's Choice"),
+        FeaturedItem(name: "Only On Shudder"),
+        FeaturedItem(name: "Newly Added"),
+        FeaturedItem(name: "Curator's Choice"),
+        FeaturedItem(name: "Only On Shudder"),
+        FeaturedItem(name: "Newly Added"),
+        FeaturedItem(name: "Curator's Choice"),
+        FeaturedItem(name: "Only On Shudder")
+    ]
 
     lazy var tableView: UITableView = {
         let tableView = UITableView()
+        tableView.backgroundColor = Colors.featuredBackgroundGray
+
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(FeaturedCategoryCell.self, forCellReuseIdentifier: FeaturedCategoryCell.reuseIdentifier)
+        tableView.register(FeaturedCell.self, forCellReuseIdentifier: FeaturedCell.reuseIdentifier)
+
+        tableView.allowsSelection = false
+        tableView.separatorColor = .clear
 
         diffCalculator = TableViewDiffCalculator(tableView: tableView, initialSectionedValues: SectionedValues([("", [])]))
         diffCalculator?.insertionAnimation = .fade
@@ -101,22 +65,20 @@ class FeaturedViewController: ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        on("INJECTION BUNDLE NOTIFICATION") {
-            self.layout()
-        }
-        self.layout()
+        title = "Shudder"
+        navigationController?.navigationBar.backgroundColor = Colors.featuredBackgroundGray
+        navigationController?.navigationBar.barTintColor = Colors.featuredBackgroundGray
+        navigationController?.navigationBar.barStyle = .blackOpaque
+
+        view.sv(tableView)
+        tableView.fillContainer()
+
+        diffCalculator?.sectionedValues = SectionedValues([("", sampleFeaturedItems)])
     }
 
-    func layout() {
-        title = "Main"
-        view.removeSubviews()
-
-        let heroView = HeroView()
-        view.sv(heroView)
-        heroView.centerInContainer()
-        heroView.size(300)
+    override var shouldAutomaticallyForwardAppearanceMethods: Bool {
+        return false
     }
-
 }
 
 extension FeaturedViewController: UITableViewDelegate, UITableViewDataSource {
@@ -132,15 +94,17 @@ extension FeaturedViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let featuredCell = tableView.dequeueReusableCell(withIdentifier: FeaturedCategoryCell.reuseIdentifier, for: indexPath) as? FeaturedCategoryCell else {
-            return FeaturedCategoryCell()
+        guard let featuredCell = tableView.dequeueReusableCell(withIdentifier: FeaturedCell.reuseIdentifier, for: indexPath) as? FeaturedCell else {
+            return FeaturedCell()
         }
-        guard let entry = diffCalculator?.value(atIndexPath: indexPath) else { return featuredCell }
-//        featuredCell.setup(parentVC: self, entry: entry, indexPath: indexPath)
+        guard let item = diffCalculator?.value(atIndexPath: indexPath) else { return featuredCell }
+        featuredCell.setup(parentVC: self, item: item)
         return featuredCell
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 140
+        let bounds = UIScreen.main.bounds
+        guard let item = diffCalculator?.value(atIndexPath: indexPath) else { return 0 }
+        return item.type == .category ? bounds.width/5*1.6 + 36 : bounds.width/1.8+20
     }
 }

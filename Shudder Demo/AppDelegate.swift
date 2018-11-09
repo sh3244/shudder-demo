@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         window = UIWindow()
         window?.rootViewController = navigationController
-        window?.backgroundColor = .white
+        window?.backgroundColor = Colors.featuredBackgroundGray
         window?.makeKeyAndVisible()
 
         setupAppearance()

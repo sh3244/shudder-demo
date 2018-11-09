@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		223823E421961144009D5F13 /* FeaturedCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223823E321961144009D5F13 /* FeaturedCategoryViewController.swift */; };
+		223823E421961144009D5F13 /* FeaturedItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223823E321961144009D5F13 /* FeaturedItemViewController.swift */; };
 		223823E621961438009D5F13 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223823E521961438009D5F13 /* Reusable.swift */; };
+		223823EE21961A58009D5F13 /* FeaturedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223823ED21961A58009D5F13 /* FeaturedCell.swift */; };
+		223823F021962560009D5F13 /* FeaturedItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223823EF21962560009D5F13 /* FeaturedItemCell.swift */; };
+		223823F22196260D009D5F13 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223823F12196260D009D5F13 /* DownloadManager.swift */; };
+		223823F42196273F009D5F13 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223823F32196273F009D5F13 /* Error.swift */; };
 		22465A222193F8A5005F4CC4 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22465A212193F8A5005F4CC4 /* UIFont.swift */; };
 		22465A242193F975005F4CC4 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22465A232193F975005F4CC4 /* UIColor.swift */; };
 		22465A262193F9C4005F4CC4 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22465A252193F9C4005F4CC4 /* Colors.swift */; };
@@ -44,8 +48,12 @@
 		09522FF9A0A3419CA95FC2A3 /* Pods-Shudder DemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shudder DemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Shudder DemoTests/Pods-Shudder DemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		159B3880FA5E17B6E2100366 /* Pods-Shudder Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shudder Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Shudder Demo/Pods-Shudder Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		1652AB9294F19F7DD19AF0E8 /* Pods-Shudder DemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shudder DemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shudder DemoTests/Pods-Shudder DemoTests.release.xcconfig"; sourceTree = "<group>"; };
-		223823E321961144009D5F13 /* FeaturedCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeaturedCategoryViewController.swift; sourceTree = "<group>"; };
+		223823E321961144009D5F13 /* FeaturedItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeaturedItemViewController.swift; sourceTree = "<group>"; };
 		223823E521961438009D5F13 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		223823ED21961A58009D5F13 /* FeaturedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedCell.swift; sourceTree = "<group>"; };
+		223823EF21962560009D5F13 /* FeaturedItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedItemCell.swift; sourceTree = "<group>"; };
+		223823F12196260D009D5F13 /* DownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
+		223823F32196273F009D5F13 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		22465A212193F8A5005F4CC4 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		22465A232193F975005F4CC4 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		22465A252193F9C4005F4CC4 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
@@ -153,7 +161,9 @@
 			children = (
 				2292E5BB2193F2F200216A6B /* Base */,
 				2292E5B82193F2A100216A6B /* FeaturedViewController.swift */,
-				223823E321961144009D5F13 /* FeaturedCategoryViewController.swift */,
+				223823ED21961A58009D5F13 /* FeaturedCell.swift */,
+				223823E321961144009D5F13 /* FeaturedItemViewController.swift */,
+				223823EF21962560009D5F13 /* FeaturedItemCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -191,6 +201,8 @@
 				22465A202193F893005F4CC4 /* Extensions */,
 				22465A252193F9C4005F4CC4 /* Colors.swift */,
 				223823E521961438009D5F13 /* Reusable.swift */,
+				223823F12196260D009D5F13 /* DownloadManager.swift */,
+				223823F32196273F009D5F13 /* Error.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -407,9 +419,12 @@
 				2253F83921940039004EA77A /* UIView.swift in Sources */,
 				2292E5B12193F1F000216A6B /* View.swift in Sources */,
 				22465A262193F9C4005F4CC4 /* Colors.swift in Sources */,
-				223823E421961144009D5F13 /* FeaturedCategoryViewController.swift in Sources */,
+				223823EE21961A58009D5F13 /* FeaturedCell.swift in Sources */,
+				223823E421961144009D5F13 /* FeaturedItemViewController.swift in Sources */,
 				22465A242193F975005F4CC4 /* UIColor.swift in Sources */,
 				2292E5912193EBEE00216A6B /* ViewController.swift in Sources */,
+				223823F22196260D009D5F13 /* DownloadManager.swift in Sources */,
+				223823F021962560009D5F13 /* FeaturedItemCell.swift in Sources */,
 				2292E5B52193F26500216A6B /* SmallCoverView.swift in Sources */,
 				2292E5AF2193EF4A00216A6B /* NavigationController.swift in Sources */,
 				2292E5C02193F38500216A6B /* Label.swift in Sources */,
@@ -419,6 +434,7 @@
 				2253F83D219400FE004EA77A /* CALayer.swift in Sources */,
 				22465A222193F8A5005F4CC4 /* UIFont.swift in Sources */,
 				2292E5B92193F2A100216A6B /* FeaturedViewController.swift in Sources */,
+				223823F42196273F009D5F13 /* Error.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
