@@ -21,6 +21,8 @@ target 'Shudder Demo' do
     # View Debugger
 #    pod 'FLEX', '2.0', :configurations => ['Debug']
 
+    pod 'OAuthSwift', '1.2.0'
+
     target 'Shudder DemoTests' do
         inherit! :search_paths
         # Pods for testing

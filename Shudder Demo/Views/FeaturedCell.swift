@@ -54,6 +54,10 @@ class FeaturedCell: UITableViewCell, Reusable {
     }
 
     deinit {
-
+        contentView.removeSubviews()()
+        featuredItemVC?.beginAppearanceTransition(false, animated: false)
+        featuredItemVC?.endAppearanceTransition()
+        featuredItemVC?.removeFromParentViewController()
+        featuredItemVC = nil
     }
 }

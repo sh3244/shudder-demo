@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (4.7.1)
   - Dwifft (0.8)
+  - OAuthSwift (1.2.0)
   - PromiseKit (4.5.2):
     - PromiseKit/Foundation (= 4.5.2)
     - PromiseKit/QuartzCore (= 4.5.2)
@@ -17,6 +18,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (= 4.7.1)
   - Dwifft (= 0.8)
+  - OAuthSwift (= 1.2.0)
   - PromiseKit (= 4.5.2)
   - SteviaLayout (= 4.3.0)
 
@@ -24,15 +26,17 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - Dwifft
+    - OAuthSwift
     - PromiseKit
     - SteviaLayout
 
 SPEC CHECKSUMS:
   Alamofire: 68d7d521118d49c615a8d2214d87cdf525599d30
   Dwifft: 463e61d07322fdf83b32ee6975ca1b20708db746
+  OAuthSwift: 7fd6855b8e4d58eb5a30d156ea9bed7a8aecd1ca
   PromiseKit: 743e497a5f505a470d3bbbf4ce0663c1268af0a4
   SteviaLayout: 4237718d4e9eaea2d530bd1426637735a7e19de6
 
-PODFILE CHECKSUM: 789a7f7cd48e582b4b8184ff37caa4f4959b6211
+PODFILE CHECKSUM: 4a0635534afc139d93fb2539b80b1fea06a57cce
 
 COCOAPODS: 1.5.3
