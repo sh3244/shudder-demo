@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import FLEX
+//import FLEX
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
         // View Debugger
-        FLEXManager.shared().showExplorer()
+//        FLEXManager.shared().showExplorer()
 
         window = UIWindow()
         window?.rootViewController = navigationController

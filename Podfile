@@ -19,7 +19,7 @@ target 'Shudder Demo' do
     pod 'SteviaLayout', '4.3.0'
 
     # View Debugger
-    pod 'FLEX', '2.0', :configurations => ['Debug']
+#    pod 'FLEX', '2.0', :configurations => ['Debug']
 
     target 'Shudder DemoTests' do
         inherit! :search_paths
