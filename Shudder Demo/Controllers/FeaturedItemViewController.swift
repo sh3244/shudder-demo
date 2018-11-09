@@ -19,6 +19,8 @@ class FeaturedItemViewController: ViewController {
         label.textColor = Colors.featuredTextGray
         label.font = UIFont.appFont(size: 16)
         label.textAlignment = .left
+        label.layer.rasterizationScale = UIScreen.main.scale
+        label.layer.shouldRasterize = true
         return label
     }()
 
