@@ -26,8 +26,6 @@
 		2292E5A42193EBF300216A6B /* Shudder_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2292E5A32193EBF300216A6B /* Shudder_DemoTests.swift */; };
 		2292E5AF2193EF4A00216A6B /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2292E5AE2193EF4A00216A6B /* NavigationController.swift */; };
 		2292E5B12193F1F000216A6B /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2292E5B02193F1F000216A6B /* View.swift */; };
-		2292E5B32193F20B00216A6B /* HeroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2292E5B22193F20B00216A6B /* HeroView.swift */; };
-		2292E5B52193F26500216A6B /* SmallCoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2292E5B42193F26400216A6B /* SmallCoverView.swift */; };
 		2292E5B92193F2A100216A6B /* FeaturedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2292E5B82193F2A100216A6B /* FeaturedViewController.swift */; };
 		2292E5C02193F38500216A6B /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2292E5BF2193F38500216A6B /* Label.swift */; };
 		2292E5C42193F85000216A6B /* RobotoCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2292E5C32193F85000216A6B /* RobotoCondensed-Bold.ttf */; };
@@ -72,8 +70,6 @@
 		2292E5A52193EBF300216A6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2292E5AE2193EF4A00216A6B /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		2292E5B02193F1F000216A6B /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
-		2292E5B22193F20B00216A6B /* HeroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroView.swift; sourceTree = "<group>"; };
-		2292E5B42193F26400216A6B /* SmallCoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallCoverView.swift; sourceTree = "<group>"; };
 		2292E5B82193F2A100216A6B /* FeaturedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedViewController.swift; sourceTree = "<group>"; };
 		2292E5BF2193F38500216A6B /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
 		2292E5C32193F85000216A6B /* RobotoCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Bold.ttf"; sourceTree = "<group>"; };
@@ -163,9 +159,7 @@
 			children = (
 				2292E5BB2193F2F200216A6B /* Base */,
 				2292E5B82193F2A100216A6B /* FeaturedViewController.swift */,
-				223823ED21961A58009D5F13 /* FeaturedCell.swift */,
 				223823E321961144009D5F13 /* FeaturedItemViewController.swift */,
-				223823EF21962560009D5F13 /* FeaturedItemCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -182,9 +176,9 @@
 		2292E5BC2193F30000216A6B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				223823ED21961A58009D5F13 /* FeaturedCell.swift */,
+				223823EF21962560009D5F13 /* FeaturedItemCell.swift */,
 				2292E5C12193F39400216A6B /* Base */,
-				2292E5B22193F20B00216A6B /* HeroView.swift */,
-				2292E5B42193F26400216A6B /* SmallCoverView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -423,12 +417,10 @@
 				223823F22196260D009D5F13 /* DownloadManager.swift in Sources */,
 				223823F621962ECB009D5F13 /* FeaturedItem.swift in Sources */,
 				223823F021962560009D5F13 /* FeaturedItemCell.swift in Sources */,
-				2292E5B52193F26500216A6B /* SmallCoverView.swift in Sources */,
 				2292E5AF2193EF4A00216A6B /* NavigationController.swift in Sources */,
 				2292E5C02193F38500216A6B /* Label.swift in Sources */,
 				223823E621961438009D5F13 /* Reusable.swift in Sources */,
 				2292E58F2193EBEE00216A6B /* AppDelegate.swift in Sources */,
-				2292E5B32193F20B00216A6B /* HeroView.swift in Sources */,
 				2253F83D219400FE004EA77A /* CALayer.swift in Sources */,
 				22465A222193F8A5005F4CC4 /* UIFont.swift in Sources */,
 				2292E5B92193F2A100216A6B /* FeaturedViewController.swift in Sources */,
@@ -589,7 +581,10 @@
 				DEVELOPMENT_TEAM = 2GK5GPF253;
 				INFOPLIST_FILE = "Shudder Demo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "AMC.Shudder-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -606,7 +601,10 @@
 				DEVELOPMENT_TEAM = 2GK5GPF253;
 				INFOPLIST_FILE = "Shudder Demo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "AMC.Shudder-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -623,7 +621,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2GK5GPF253;
 				INFOPLIST_FILE = "Shudder DemoTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "AMC.Shudder-DemoTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -641,7 +643,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2GK5GPF253;
 				INFOPLIST_FILE = "Shudder DemoTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "AMC.Shudder-DemoTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
