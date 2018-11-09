@@ -42,6 +42,9 @@ class FeaturedItemCell: UICollectionViewCell, Reusable {
 
         containerView.sv(imageView)
         imageView.fillContainer()
+
+        layer.rasterizationScale = UIScreen.main.scale
+        layer.shouldRasterize = true
     }
 
     func load() {
